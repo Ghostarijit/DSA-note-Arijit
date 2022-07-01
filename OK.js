@@ -461,19 +461,93 @@ console.log(result)*/
 let result = allchar("aabbcc")
 console.log(result)*/
 
-function BinarySearch(arr, num) {
+/*function BinarySearch(nums, target) {
 
     let start = 0
-    let end = arr.length-1
+    let end = nums.length-1
+   // if(target<nums[start] || target>nums[end]) return -1
 
-    if (start < end) {
+    while (start <=end  ) {
         let mid = Math.round((start + end) / 2)
-        if (num === arr[mid]) return mid
-        else if (num > arr[mid]) return BinarySearch(arr, mid + 1, end, num)
-        else return BinarySearch(arr, start, mid - 1, num)
+        if (target === nums[mid]) return mid
+        else if (target > nums[mid]) start = mid+1//return BinarySearch(arr, mid + 1, end, num)
+        else  end=mid-1   //return BinarySearch(arr, start, mid - 1, num)
     }
-    return false
+  return -1
 }
 
-let result = BinarySearch([1,2,3,4,5,6,7,8,9,10,11], 8)
+let result = BinarySearch([1,2,3,4,5,6,8,9,10,11], 7)
+console.log(result)*/
+
+/*function isPrimeNum(num) {
+
+    if (num < 2) return true
+    for (let i = 2; i < num; i++) {
+        if (num % i == 0) return false
+    }
+    return true
+}
+
+//let result =  isPrimeNum(1)
+//console.log(result)
+
+
+function ChbeckBelow1000isPrime() {
+    let num = 1
+    while (num <  20) {
+        if (isPrimeNum(num)) console.log(num)
+        num++
+    }
+  
+}
+
+let result = ChbeckBelow1000isPrime()
+
+console.log(result)*/
+
+/*function sort01(arr) {
+
+    let left = 0
+    let rigtht = arr.length - 1
+
+    while (left < rigtht) {
+
+        if (arr[left] == 0 && left < rigtht) {
+            left++
+        }
+
+        if (arr[rigtht] == 1 && left < rigtht) {
+           
+                rigtht--
+            
+        }
+        if (left < rigtht) {
+            [arr[left],arr[rigtht]] = [arr[rigtht],arr[left]]
+        }
+    }
+
+ return arr
+}
+
+let result = sort01([0,1,0,1,1,1,1,0,0,1,0])
+console.log(result)*/
+
+function missing(arr){
+let min = Math.min(...arr)
+let max = Math.max(...arr)
+let x = ((min-1)*(min))/2
+let y = ((max)*(max+1))/2
+
+const initialValue = 0;
+const sumWithInitial = arr.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+)
+let miss = (y-x)-sumWithInitial
+return miss
+
+
+}
+
+let result = missing([9,8,10,13,12 ])
 console.log(result)

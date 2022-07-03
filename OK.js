@@ -461,11 +461,11 @@ console.log(result)*/
 let result = allchar("aabbcc")
 console.log(result)*/
 
-/*function BinarySearch(nums, target) {
+function BinarySearch(nums, target) {
 
     let start = 0
     let end = nums.length-1
-   // if(target<nums[start] || target>nums[end]) return -1
+    if(target<nums[start] || target>nums[end]) return -1
 
     while (start <=end  ) {
         let mid = Math.round((start + end) / 2)
@@ -476,8 +476,8 @@ console.log(result)*/
   return -1
 }
 
-let result = BinarySearch([1,2,3,4,5,6,8,9,10,11], 7)
-console.log(result)*/
+let result = BinarySearch([1,2,3,4,5,6,8,9,10,11],7)
+console.log(result)
 
 /*function isPrimeNum(num) {
 
@@ -532,7 +532,7 @@ console.log(result)*/
 let result = sort01([0,1,0,1,1,1,1,0,0,1,0])
 console.log(result)*/
 
-function missing(arr){
+/*function missing(arr){
 let min = Math.min(...arr)
 let max = Math.max(...arr)
 let x = ((min-1)*(min))/2
@@ -550,4 +550,4 @@ return miss
 }
 
 let result = missing([9,8,10,13,12 ])
-console.log(result)
+console.log(result)*/

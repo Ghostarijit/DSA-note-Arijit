@@ -187,7 +187,7 @@ console.log(result)*/
   let result =   edInxOfSub-stIdxOfSub+1
    
     if(str.length==0) return 0
-    else return  result
+    else return  res
 
    // console.log(windowMap, stIdxOfSub, edInxOfSub, res)
 }
@@ -260,7 +260,7 @@ console.log(result)*/
 
 
 
-/*function removeAnagrams(words) {
+function removeAnagrams(words) {
     
     const result = [];
     let lastWordSorted = null;
@@ -278,7 +278,7 @@ console.log(result)*/
 
 let result =  removeAnagrams(["abba","baba","bbaa","cd","cd"])
 
-console.log(result)*/
+console.log(result)
 
 
 /*function sum(arr){
@@ -344,11 +344,12 @@ if(str.length<=1) return true
 
     let f = str[0]
     let l = str.slice(-1)
+    console.log(str.slice(1,-1))
     if(f==l) return palindrome(str.slice(1,-1))
     else return false
 }
 
-let result = palindrome("eyk")
+let result = palindrome("racecar ")
 console.log(result)*/
 
 /*function reverse(str){
@@ -461,7 +462,7 @@ console.log(result)*/
 let result = allchar("aabbcc")
 console.log(result)*/
 
-function BinarySearch(nums, target) {
+/*function BinarySearch(nums, target) {
 
     let start = 0
     let end = nums.length-1
@@ -476,8 +477,8 @@ function BinarySearch(nums, target) {
   return -1
 }
 
-let result = BinarySearch([1,2,3,4,5,6,8,9,10,11],7)
-console.log(result)
+let resul = BinarySearch([1,2,3,4,5,6,8,9,10,11],7)
+console.log(resul)*/
 
 /*function isPrimeNum(num) {
 
@@ -551,3 +552,40 @@ return miss
 
 let result = missing([9,8,10,13,12 ])
 console.log(result)*/
+
+/*function toString(num){
+
+    let letters ="abcdefghijklmnopqrstuvwxyz"
+
+    let str=""
+
+    for(let i=0;i<num;i++){
+    str+=letters[i]
+    }
+    return str
+}
+
+let res = toString(5)
+console.log(res)
+
+function NumberToAlphabet(arr){
+let max = Math.max(...arr)
+let alpha = ['']
+
+    for(let i=1;i<= max;i++){
+        alpha.push(toString(i))
+    }
+
+    for(let i=0;i<arr.length;i++){
+       arr[i]= alpha[arr[i]]
+    }
+    return arr
+}
+
+let result = NumberToAlphabet([2,5])
+
+console.log(result)*/
+
+
+
+

@@ -260,7 +260,7 @@ console.log(result)*/
 
 
 
-function removeAnagrams(words) {
+/*function removeAnagrams(words) {
     
     const result = [];
     let lastWordSorted = null;
@@ -325,7 +325,7 @@ var firstUniqChar = function(s) {
    return findex
 }*/
 
-/*function multiplearray(arr){
+function multiplearray(arr){ 
 //let arr = a.split("")
 
 if(arr.length == 0) return 1
@@ -335,8 +335,8 @@ else
     return arr[0] *  multiplearray(arr.splice(1))
 }
 
-let result = multiplearray([1,2,3,1])
-console.log (result)*/
+let res = multiplearray([1,2,3,1])
+console.log (res)
 
 /*function palindrome(str){
 
@@ -349,7 +349,7 @@ if(str.length<=1) return true
     else return false
 }
 
-let result = palindrome("racecar ")
+let result = palindrome("racecar")
 console.log(result)*/
 
 /*function reverse(str){
@@ -363,7 +363,7 @@ let result = reverse("arijit")
 console.log(result)*/
 
 
-/*function flatenArr(arr) {
+function flatenArr(arr) {
     let flat = []
     for (let i = 0; i < arr.length; i++) {
 
@@ -376,11 +376,11 @@ return flat
 
 let result = flatenArr([1,2,[3,5,[4,[4,5,[[[[[[[[[[[9]]]]]]]]]]]]]]])
  
-console.log(result)*/
+console.log(result)
 
 /*function reverse(str){
     if(str.length<=1) return str
-
+     
     return reverse(str.slice(1)) + str[0]
 }
 
@@ -394,7 +394,7 @@ return arr.join(" ")
 
 let result = reverseStntance("my name is arijit")
 
-console.log(result)*/
+console.log(result)*/ 
 
 /*function capitaliseFirst(arr){
 
@@ -471,8 +471,8 @@ console.log(result)*/
     while (start <=end  ) {
         let mid = Math.round((start + end) / 2)
         if (target === nums[mid]) return mid
-        else if (target > nums[mid]) start = mid+1//return BinarySearch(arr, mid + 1, end, num)
-        else  end=mid-1   //return BinarySearch(arr, start, mid - 1, num)
+        else if (target > nums[mid]) start = mid+1   //return BinarySearch(arr, mid + 1, end, num)
+        else  end=mid-1      //return BinarySearch(arr, start, mid - 1, num)
     }
   return -1
 }

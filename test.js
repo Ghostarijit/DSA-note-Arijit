@@ -20,3 +20,19 @@ let res = intersection([[3,1,2,4,5],[1,2,3,4],[3,4,5,6]])
 console.log(res)
 
 // leetcode 2248
+function checkTags(str) {
+    let arr = str.split(/[<>]/).filter(x => x).filter(x => (x == "b" ||  x == "i" ||  x == "em" || x == "div" || x == "p" || x == "/b"||  x == "/i" || x == "/em" || x == "/div" || x == "/p"))
+    let stack = []
+    for (let i = 0; i < arr.length; i++) {
+        let index = stack.indexOf(arr[i].slice(1))
+        if (index !== -1) {
+            stack.splice(index, 1)
+        }
+        else if (arr[i][0] != "/") stack.push(arr[i])
+        else {
+            return stack[stack.length - 1]
+        }
+    }
+}
+let str = "<div>abc</div><p><em><i>test test test</b></em></p>"
+console.log(checkTags(str))

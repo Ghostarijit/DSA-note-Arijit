@@ -1,0 +1,24 @@
+(function orderStack(){
+    console.log("function begin log")
+    setImmediate(()=> console.log("setImmediate  log"), 0)
+    new Promise((resolve, reject ) => {
+        resolve(        
+            setTimeout(()=>
+                console.log("This is promise statement"),1000
+            )
+        )  
+    })
+    for (var index = 0; index < 5; index++) {
+        setTimeout(()=>console.log("timeOut inside loop " + index),5000)
+     }
+    console.log("function end log")
+ })()
+
+
+ // function begin
+ // This is promise statement
+ // setImmediate log
+//  function endlog
+//   loop
+
+

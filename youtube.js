@@ -2,12 +2,12 @@ let express = require("express")
 
 let app = express()
 
-app.get("/postman",function(req,res){
+app.get("/postman",(req,res)=>{
    
-      res.send("hii, Arijit")
+      res.send("hii, Arijit,I love you")
      
 })
-app.listen(4000)
+app.listen(4000,console.log("Server connected"))
 
 
 
@@ -29,7 +29,7 @@ for (let i = 1; i <= 2; i++) {
     arr.push(max - min)
 
 
-    //console.log(arr.reduce((a,b)=>a+b))
+    console.log(arr.reduce((a,b)=>a+b))
 
 
 }
@@ -88,3 +88,101 @@ function BubbleSort(arr) {
 
 
 console.log(null)
+
+
+function FlatArray(arr){
+
+    let flat =[]
+    for(let i=0;i<arr.length;i++){
+        if(Array.isArray(arr[i])==false){
+            flat.push(arr[i])
+        }
+        else flat = flat.concat(FlatArray(arr[i]))
+    }
+   
+       return flat
+}
+
+let re = FlatArray([1,[5,[6,8]]])
+console.log(re)
+
+
+function isPrimeNum(num) {
+
+    if (num < 2) return true
+    for (let i = 2; i < num; i++) {
+        if (num % i == 0) return false
+    }
+    return true
+}
+
+//let result =  isPrimeNum(1)
+//console.log(result)
+
+
+function ChbeckBelow1000isPrime() {
+    let num1 = 4
+    let num2 =7
+    let arr =[]
+    while (num1 <= num2 ) {
+        if (isPrimeNum(num1)==true) arr.push(num1)
+        num1++
+    }
+  
+    return arr
+}
+   let r = ChbeckBelow1000isPrime() 
+   console.log(r)
+
+
+   
+
+
+var trap = function(height) {
+    let result = 0;
+    let left = 0;
+    let right = height.length - 1;
+    let leftMax = 0;
+    let rightMax = 0;
+    while (left < right) {
+        if (height[left] < height[right]) {
+            if (height[left] >= leftMax) {
+                leftMax = height[left];
+            } else {
+                result += leftMax - height[left];
+            }
+            left++;
+        } else {
+            if (height[right] >= rightMax) {
+                rightMax = height[right];
+            } else {
+                result += rightMax - height[right];
+            }
+            right--;
+        }
+    }
+    return result;
+    
+    
+}
+
+
+function  reverse(arr){
+       
+        
+    let i=0
+    let j=arr.length-1
+    while(i<j){
+        [arr[i],arr[j]]=[arr[j],arr[i]]
+        i++
+        j--
+    }
+    
+    return arr
+}
+
+
+let j =  reverse([2,4,3])
+
+
+console.log(j.join(""))

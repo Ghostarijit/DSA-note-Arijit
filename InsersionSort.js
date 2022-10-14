@@ -6,7 +6,7 @@ function InsersionSort(arr) {
         while (i >= 1 && arr[i - 1] > arr[i]) {
 
             [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]]
-            i--
+            i-- 
         }
     }
     return arr

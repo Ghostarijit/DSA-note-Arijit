@@ -37,3 +37,35 @@ var sortArray = function(nums) {
 let res = sortArray([3,2,1,68,12,15,10])
 console.log(res)
 
+
+
+
+
+
+function CheckInteger(num){
+
+    if(Number.isInteger(num)){
+
+        return num
+    }
+
+    return false
+}
+
+let g = CheckInteger(12.000)
+
+console.log(g)
+
+
+function is_Int(num) {
+  
+    if (typeof num !== 'number')
+        return false; 
+   
+   return !isNaN(num) && parseInt(Number(num)) == num && !isNaN(parseInt(num, 10));
+ }
+ console.log(is_Int(23));
+ console.log(is_Int(4e2));
+ console.log(is_Int(NaN));
+ console.log(is_Int(23.75));
+ console.log(is_Int(-23));

@@ -21,6 +21,7 @@ this.tail.next= newNode
 this.tail =newNode
 this.length++
 }
+
 prepend(data){
     const newNode = {
         value:data,
@@ -29,6 +30,7 @@ prepend(data){
     newNode.next= this.head
     this.head = newNode
 }
+
 
 traversing(req){
     let counter = 0
@@ -62,8 +64,8 @@ traversing(req){
 
 const myList = new linkedList(1)
 myList.append(2)
-myList.append(3)
+myList.append(2)
 //myList.prepend(10)
 //myList.insert(1,4)
-myList.deleteNode(1)
+//myList.deleteNode(1)
 console.log(myList)
